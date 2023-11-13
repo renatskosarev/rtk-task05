@@ -1,6 +1,5 @@
 package com.skosarev.rtktask05.controller;
 
-import com.skosarev.rtktask05.dto.StudentDTO;
 import com.skosarev.rtktask05.dto.StudentWithAverageMarkDTO;
 import com.skosarev.rtktask05.service.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +22,6 @@ public class GroupController {
 
     @GetMapping("{id}/average_marks")
     public List<StudentWithAverageMarkDTO> getAverageMarks(@PathVariable int id) {
-        return groupService.getAllStudentsDTO();
+        return groupService.getAllStudentsWithAverageMarkDTO(id);
     }
 }
