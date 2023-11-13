@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.lang.reflect.Field;
+import java.util.List;
 
 
 @Service
@@ -21,6 +22,10 @@ public class StudentService {
 
     public void create(Student student) {
         studentRepository.save(student);
+    }
+
+    public void createAll(List<Student> students) {
+        studentRepository.saveAllAndFlush(students);
     }
 
     public void updateMark(int studentId, String subjectName, int newMark) {
