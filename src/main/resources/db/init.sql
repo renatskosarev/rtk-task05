@@ -1,4 +1,4 @@
--- DROP TABLE IF EXISTS study_plans;
+DROP TABLE IF EXISTS study_plans;
 DROP TABLE IF EXISTS subjects;
 DROP TABLE IF EXISTS students;
 DROP TABLE IF EXISTS groups;
@@ -31,9 +31,9 @@ CREATE TABLE subjects
     name VARCHAR
 );
 
--- CREATE TABLE study_plans
--- (
---     group_id INT REFERENCES groups (id) ON DELETE NO ACTION,
---     subject  VARCHAR NOT NULL,
---     hours    INT     NOT NULL CHECK (hours >= 0)
--- );
+CREATE TABLE study_plans
+(
+    group_id INT REFERENCES groups (id) ON DELETE NO ACTION,
+    subject  VARCHAR NOT NULL,
+    hours    INT     NOT NULL CHECK (hours >= 0)
+);
