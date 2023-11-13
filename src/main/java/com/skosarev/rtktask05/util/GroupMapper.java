@@ -4,6 +4,9 @@ import com.skosarev.rtktask05.dto.GroupDTO;
 import com.skosarev.rtktask05.model.Group;
 
 public class GroupMapper {
+    private GroupMapper() {
+    }
+
     public static GroupDTO convertToDTO(Group group) {
         return new GroupDTO(
                 group.getId(),
