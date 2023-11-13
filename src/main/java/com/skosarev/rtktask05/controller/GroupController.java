@@ -20,8 +20,8 @@ public class GroupController {
         this.groupService = groupService;
     }
 
-    @GetMapping("{id}/average_marks")
-    public List<StudentWithAverageMarkDTO> getAverageMarks(@PathVariable int id) {
-        return groupService.getAllStudentsWithAverageMarkDTO(id);
+    @GetMapping("{groupId}/average_marks")
+    public List<StudentWithAverageMarkDTO> getAverageMarks(@PathVariable int groupId) {
+        return groupService.getAllStudentsWithAverageMarkDTO(groupId);
     }
 }
